@@ -62,7 +62,6 @@ base_ok <- fond_com %>%
 # Fond régional de l'IGN (ADMIN-EXPRESS)
 fond_reg <- st_read(paste0(here::here("Aires_gens_du_voyage","data"),"/REGION.shp"),options="ENCODING=UTF-8")
 
-# code qui permet de faire une très très très jolie carte
 ggplot()+
   geom_sf(data=fond_reg,color="gray60",fill="linen")+
   geom_point(data=base_ok,aes(x=x,y=y,size=n,color=as.factor(source),fill=as.factor(source)),shape=21,alpha=.5)+
